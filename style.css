@@ -1,0 +1,85 @@
+/* Start global rules */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Barlow', sans-serif;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Mobile */
+@media (max-width: 375px) {
+  .container {
+    width: 100%;
+  }
+}
+/* Desktop */
+@media (min-width: 1440px) {
+  .container {
+    width: 1400px;
+  }
+}
+/* End global rules */
+/* Start header */
+header {
+  background-color: lightblue;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px;
+}
+header .logo img {
+  height: 30px;
+}
+header .container nav {
+  display: flex;
+  align-items: center;
+}
+header .container nav ul {
+  list-style: none;
+}
+header .container nav ul li {
+  display: inline;
+  margin-left: 30px;
+}
+header .container nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+header .container nav button {
+  border: none;
+  width: 120px;
+  background-color: #fff;
+  color: #23303e;
+  text-transform: uppercase;
+  font-family: 'Fraunces', serif;
+  padding: 15px;
+  border-radius: 50px;
+  margin-left: 30px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  cursor: pointer;
+}
+header .container nav button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+/* End header */
