@@ -21,6 +21,10 @@ body {
     width: 100%;
   }
 }
+/* Medium */
+@media (min-width: 376px) and (max-width: 1439px) {
+
+}
 /* Desktop */
 @media (min-width: 1440px) {
   .container {
@@ -59,6 +63,26 @@ header .container nav ul li a {
   text-decoration: none;
   color: white;
 }
+header .container .ham-icon {
+display: none;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  header .container {
+    width: 100%;
+    padding: 20px;
+  }
+  header .logo img {
+    height: 20px;
+  }
+  header .container nav {
+    visibility: hidden;
+    display: none;
+  }
+  header .container .ham-icon {
+    display: block;
+  }
+}
 header .container nav button {
   border: none;
   width: 120px;
@@ -89,11 +113,12 @@ header .container nav button:hover {
 .landing {
   background-image: url(./images/desktop/image-header.jpg);
   background-size: cover;
+  background-position: center;
   height: 100vh;
 }
 .landing .intro {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   padding-top: 150px;
@@ -107,5 +132,23 @@ header .container nav button:hover {
   margin-bottom: 135px;
   word-spacing: 1.8;
   letter-spacing: 12px;
+}
+@media (max-width: 768px) {
+  .landing {
+    height: 62vh;
+  }
+  .landing .intro {
+    flex-flow: wrap;
+    padding-top: 120px;
+  }
+  .landing .intro h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 8px;
+  }
+  .landing .intro img {
+    height: 90px;
+  }
 }
 /* End landing */
