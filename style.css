@@ -146,6 +146,7 @@ header .container nav button:hover {
 }
 .services .card {
   order: 0;
+  aspect-ratio: 1 / 1;
 }
 .services .card .text {
   padding: 50px 50px;
@@ -207,7 +208,7 @@ header .container nav button:hover {
 }
 .services .card img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .services 
 .cherry,
@@ -335,14 +336,6 @@ header .container nav button:hover {
   grid-template-rows: repeat(2, 1fr);
 }
 .images-container div {
-  /* background-size: cover;
-  background-position: center;
-  width: 50%;
-  height: 0;
-  padding-bottom: 50%;
-  position: absolute;
-  top: 0;
-  left: 0; */
   background-size: cover;
   aspect-ratio: 1 / 1;
 }
@@ -371,10 +364,10 @@ header .container nav button:hover {
     background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
   }
   .images-container div:nth-child(2) {
-    background-image: url(./images/desktop/image-gallery-cone.jpg);
+    background-image: url(./images/desktop/image-gallery-orange.jpg);
   }
   .images-container div:nth-child(3) {
-    background-image: url(./images/desktop/image-gallery-orange.jpg);
+    background-image: url(./images/desktop/image-gallery-cone.jpg);
   }
   .images-container div:last-child {
     background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
@@ -383,6 +376,54 @@ header .container nav button:hover {
 /* End bottom images */
 /* start footer */
 footer {
-  background-color: lightblue;
+  font-family: var(--sans-serif);
+  background-color: rgb(138, 204, 193);
+  padding: 60px 50px;
+  text-align: center;
+}
+footer > img:first-of-type {
+  filter: invert(40%) sepia(34%) saturate(715%) hue-rotate(118deg) brightness(88%) contrast(85%);
+  -webkit-filter: invert(40%) sepia(34%) saturate(715%) hue-rotate(118deg) brightness(88%) contrast(85%);
+  margin-bottom: 30px;
+}
+footer ul {
+  list-style: none;
+}
+footer .links {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+footer .links ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .links ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #458c7e;
+}
+footer .find-us {
+  margin: 0 auto;
+  max-width: 180px;
+}
+footer .find-us ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+@media (min-width: 769px) {
+  footer > img:first-of-type {
+    height: 35px;
+  }
+  footer .links {
+    margin-bottom: 90px;
+  }
+  footer .links ul li a {
+    font-size: 18px;
+  }
+  footer .find-us ul {
+    padding: 0;
+  }
 }
 /* End footer */
