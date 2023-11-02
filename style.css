@@ -327,3 +327,62 @@ header .container nav button:hover {
   }
 }
 /* End client testimonials */
+/* Start bottom images */
+.images-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.images-container div {
+  /* background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  position: absolute;
+  top: 0;
+  left: 0; */
+  background-size: cover;
+  aspect-ratio: 1 / 1;
+}
+.images-container div:first-child {
+  background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
+}
+.images-container div:nth-child(2) {
+  background-image: url(./images/mobile/image-gallery-orange.jpg);
+}
+.images-container div:nth-child(3) {
+  background-image: url(./images/mobile/image-gallery-cone.jpg);
+}
+.images-container div:last-child {
+  background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+}
+@media (min-width: 769px) {
+  .images-container {
+    position: relative;
+    display: flex;
+  }
+  .images-container div {
+    background-size: cover;
+    width: 25%;
+  }
+  .images-container div:first-child {
+    background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+  }
+  .images-container div:nth-child(2) {
+    background-image: url(./images/desktop/image-gallery-cone.jpg);
+  }
+  .images-container div:nth-child(3) {
+    background-image: url(./images/desktop/image-gallery-orange.jpg);
+  }
+  .images-container div:last-child {
+    background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+  }
+}
+/* End bottom images */
+/* start footer */
+footer {
+  background-color: lightblue;
+}
+/* End footer */
