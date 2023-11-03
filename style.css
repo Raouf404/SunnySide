@@ -431,6 +431,7 @@ header .container nav button:hover {
   .images-container div {
     background-size: cover;
     width: 25%;
+    aspect-ratio: 3 / 4;
   }
   .images-container div:first-child {
     background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
