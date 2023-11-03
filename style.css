@@ -41,27 +41,10 @@ header .container nav ul li {
 }
 header .container nav ul li a {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 header .container .ham-icon {
 display: none;
-}
-/* Mobile */
-@media (max-width: 768px) {
-  header .container {
-    width: 100%;
-    padding: 30px;
-  }
-  header .logo img {
-    height: 20px;
-  }
-  header .container nav {
-    visibility: hidden;
-    display: none;
-  }
-  header .container .ham-icon {
-    display: block;
-  }
 }
 header .container nav button {
   border: none;
@@ -87,6 +70,83 @@ header .container nav button {
 header .container nav button:hover {
   background-color: rgba(255, 255, 255, 0.5);
   color: #fff;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  header .container {
+    width: 100%;
+    padding: 30px;
+  }
+  header .logo img {
+    height: 20px;
+  }
+  header .container nav {
+    position: absolute;
+    flex-direction: column;
+    top: 130px;
+    right: 50px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    display: none;
+  }
+  header .container nav::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    height: 275px;
+    background-color: #fff;
+    top: -40px;
+    left: -80px;
+    right: -80px;
+}
+  header .container nav::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: 15px transparent solid;
+    border-left: 15px #fff solid;
+    top: -54px;
+    right: -95px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+  header .container nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header .container nav ul li {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  header .container nav ul li a {
+    color: #5a636c;
+    font-size: 18px;
+  }
+  header .container nav button {
+    background-color: #FFD302;
+    margin: 0;
+  }
+  header .container nav button:hover {
+    background-color: rgba(255, 213, 2, 0.253);
+    color: #FFD302;
+  }
+  header .container .ham-icon {
+    display: block;
+    cursor: pointer;
+  }
+  header .container .ham-icon:hover nav {
+    display: block;
+  }
 }
 /* End header */
 /* Start landing */
