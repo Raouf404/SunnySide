@@ -140,5 +140,42 @@
   </div>
 </footer>
 <!-- End footer -->
+<script>
+  const hamIcon = document.querySelector('.ham-icon');
+  const nav = document.querySelector('header nav');
+  let isActive = false;
+
+  hamIcon.addEventListener('click', () => {
+    isActive = !isActive;
+
+    if (isActive) {
+      nav.style.display = 'flex';
+    } else {
+      nav.style.display = 'none';
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      hamIcon.style.display = 'none';
+      nav.style.display = 'flex';
+      isActive = true;
+    } else {
+      hamIcon.style.display = 'block';
+      nav.style.display = 'none';
+      isActive = false;
+    }
+  });
+
+  if (window.innerWidth > 768) {
+    hamIcon.style.display = 'none';
+    nav.style.display = 'flex';
+    isActive = true;
+  } else {
+    hamIcon.style.display = 'block';
+    nav.style.display = 'none';
+    isActive = false;
+  }
+</script>
 </body>
 </html>
