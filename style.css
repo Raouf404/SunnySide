@@ -195,14 +195,12 @@ header .container nav button:hover {
 /* End landing */
 /* Start services */
 .services .card:first-of-type {
-  aspect-ratio: 1 / 1;
-  background-image: url(./images/desktop/image-transform.jpg);
+  background-image: url(./images/mobile/image-transform.jpg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 .services .card:nth-child(3) {
-  aspect-ratio: 1 / 1;
-  background-image: url(./images/desktop/image-stand-out.jpg);
+  background-image: url(./images/mobile/image-stand-out.jpg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -263,7 +261,7 @@ header .container nav button:hover {
 .services .card1 {
   height: 536px;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   text-align: center;
   padding: 0 12px;
 }
@@ -284,6 +282,49 @@ header .container nav button:hover {
 .services .card1 p {
   line-height: 1.5;
   font-size: 15px;
+}
+@media (min-width: 769px) {
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .services .card:nth-child(2) {
+    order: -1;
+  }
+  .services .card:first-of-type {
+    background-image: url(./images/desktop/image-transform.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .services .card:nth-child(3) {
+    background-image: url(./images/desktop/image-stand-out.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .services .cherry {
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    color: #25564b;
+  }
+  .services .orange {
+    background-image: url(./images/desktop/image-photography.jpg);
+    color: #19536b;
+  }
+  .services .card {
+    width: 100%;
+  }
+  .services .card:nth-child(2),
+  .services .card:nth-child(4) {
+    padding: 20%;
+  }
+  .services .card1 {
+    padding: 0 20%;
+  }
+}
+@media (max-width: 768px) {
+  .services .card {
+    aspect-ratio: 1 / 1;
+  }
 }
 /* End services */
 /* Start client testimonials */
